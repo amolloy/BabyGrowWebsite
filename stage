@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+rsync -arvuz www/ asmoll01@staging.babygrowapp.com:staging.babygrowapp.com/ --exclude '.git' --exclude '.hg' --exclude '.hgcheck' --exclude 'build'
+
+
+
