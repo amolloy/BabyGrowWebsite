@@ -1,0 +1,839 @@
+.slideshow {
+	display: block;
+	position: relative;
+	z-index: 0;
+}
+.slideshow-images {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}		
+.slideshow-images img {
+	display: block;
+	position: absolute;
+	z-index: 1;
+}		
+.slideshow-thumbnails {
+	overflow: hidden;
+}
+
+.slideshow-images {
+	height: 300px;
+	width: 400px;
+}		
+.slideshow-images-visible { 
+	opacity: 1;
+}	
+.slideshow-images-prev { 
+	opacity: 0; 
+}
+.slideshow-images-next { 
+	opacity: 0; 
+}
+.slideshow-images img {
+	float: left;
+	left: 0;
+	top: 0;
+}	
+
+.slideshow {
+	margin: 0 auto;
+	width: 215px;
+	height: 323px;
+}
+.slideshow a img {
+	border: 0;
+}
+
+.slideshow-captions {
+	background: #000;
+	bottom: 0;
+	color: #FFF;
+	font: normal 12px/22px Arial, sans-serif;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 10px;
+	width: 100%;
+	z-index: 10000;
+}
+.slideshow-captions-hidden {
+	height: 0;
+	opacity: 0;
+}
+.slideshow-captions-visible {
+	height: 22px;
+	opacity: .7;
+}
+
+.slideshow-controller {
+	background: url(controller.png) no-repeat;
+	height: 42px;
+	left: 50%;
+	margin: -21px 0 0 -119px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	width: 238px;
+	z-index: 10000;
+}
+.slideshow-controller * {
+	margin: 0;
+	padding: 0;
+}
+.slideshow-controller-hidden { 
+	opacity: 0;
+}
+.slideshow-controller-visible {
+	opacity: 1;
+}
+.slideshow-controller a {
+	cursor: pointer;
+	display: block;
+	height: 18px;
+	overflow: hidden;
+	position: absolute;
+	top: 12px;
+}
+.slideshow-controller a.active {
+	background-position: 0 18px;
+}
+.slideshow-controller li {
+	list-style: none;
+}
+.slideshow-controller li.first a {
+	background-image: url(controller-first.gif);
+	left: 33px;
+	width: 19px;
+}
+.slideshow-controller li.last a {
+	background-image: url(controller-last.gif);
+	left: 186px;
+	width: 19px;
+}
+.slideshow-controller li.next a {
+	background-image: url(controller-next.gif);
+	left: 145px;
+	width: 28px;
+}
+.slideshow-controller li.pause a {
+	background-image: url(controller-pause.gif);
+	left: 109px;
+	width: 20px;
+}
+.slideshow-controller li.play a {
+	background-position: 20px 0;
+}
+.slideshow-controller li.play a.active {
+	background-position: 20px 18px;
+}
+.slideshow-controller li.prev a {
+	background-image: url(controller-prev.gif);
+	left: 65px;
+	width: 28px;
+}
+
+.slideshow-loader {
+	height: 28px;
+	left: 93px;
+	position: absolute;
+	top: 147px;
+	width: 28px;
+	z-index: 10001;
+}
+.slideshow-loader-hidden {
+	opacity: 0;
+}
+.slideshow-loader-visible {
+	opacity: 1;
+}
+
+.slideshow-thumbnails {
+	bottom: -65px;
+	height: 65px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+.slideshow-thumbnails * {
+	margin: 0;
+	padding: 0;
+}
+.slideshow-thumbnails ul {
+	height: 65px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 10000px;
+}
+.slideshow-thumbnails li {
+	float: left;
+	list-style: none;
+	margin: 5px 5px 5px 0;
+	position: relative;
+}
+.slideshow-thumbnails a {
+	display: block;
+	float: left;
+	padding: 5px;
+	position: relative; 
+}
+.slideshow-thumbnails a:hover {
+	background-color: #FF9 !important;
+	opacity: 1 !important;
+}
+.slideshow-thumbnails img {
+	display: block;
+}
+.slideshow-thumbnails-active {
+	background-color: #9FF;
+	opacity: 1;
+}
+.slideshow-thumbnails-inactive {
+	background-color: #FFF;
+	opacity: .5;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+					text-rendering: optimizeLegibility;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --- Universal --- */
+
+hr
+{
+	border: solid #8d8d8d;
+	border-width: 1px 0 0;
+	clear: both;
+	height: 0;
+	margin: 17px 0 18px;
+}
+			   
+hr
+{
+	border-top: 1px solid #8d8d8d; /* Dark */
+	border-bottom: 1px solid #ffffff; /* Light */
+}
+
+/* --- Layout --- */
+
+body
+{
+	background: #323232;
+}
+
+
+#container
+{
+	background: #323232;
+	overflow: hidden;
+}
+
+#top
+{
+	background-repeat: repeat-x;
+	background-color: #eaeaea;
+	background-image: url(img/background.jpg);
+	height: 321px;
+}
+
+#header
+{
+	margin: 50px 0 0 0;
+}
+
+#nav
+{
+	background: #e7e7e7 url(img/nav-bg.png) repeat-x;
+	height: 53px;
+	color: #878787;
+}
+
+#bottom
+{
+	background: #323232;
+}
+
+#content
+{
+	background: #f8f6f6 url(img/content-header.png) top repeat-x;
+	margin: 30px 0 10px 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.grid
+{
+	width: 960px;
+	margin: auto;
+}
+
+.left-column
+{
+	width: 300px;
+	float: left;
+	position: relative;
+}
+
+.right-column
+{
+	width: 600px;
+	margin: 0 20px 0 0px;
+	float: right;
+	position: relative;
+}              
+
+.post
+{
+	margin: 20px 20px 0px 20px;
+	padding-bottom: 40px;
+}
+
+.post p
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#disqus_thread
+{
+	margin: 20px 20px 0px 20px;
+				  padding-bottom: 40px;
+	color: #8c8a8a;
+	font: .9em "Helvetica Neue", Arial, Helvetica, sans-serif;
+	line-height: 140%;
+
+}
+
+.text a
+{
+	color: #3399cc;
+	text-decoration: none;
+}
+
+.photo
+{   
+	text-align: center;
+}
+
+.photo a
+{
+	color: #3399cc;
+	text-decoration: none;
+}
+
+.chat .post .odd .label
+{
+	display: inline;
+	color: #646464;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	margin-left: 20px;
+	text-align: left;
+}
+
+.chat .post .even .label
+{
+	display: inline;
+	color: #646464;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 100px;
+
+}
+
+.chat .post .odd p
+{
+	color: #ffffff;
+	border: 5px solid #5a5a5a;
+	background-color: #777777;
+	display: inline-block;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: 10px 0px 20px 20px;
+	padding: 10px 20px 10px 20px;
+	width: 250px;
+	-webkit-border-radius: 10px;               
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	text-align: center;
+	text-shadow: 0px 1px 1px #000;
+	/* Issue with light text on dark in OSX*/
+	-webkit-text-stroke:1px transparent; /*fixes it for safari*/
+	opacity: 0.9999; /*improves it a little bit for FF */
+
+}
+
+.chat .post .even p
+{
+	color: #6b6b6b;
+	border: 5px solid #cfcfcf;
+	background-color: #dcdcdc;
+	display: inline-block;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: 10px 0px 20px 95px;
+	padding: 10px 20px 10px 20px;
+	width: 250px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	text-align: center;
+	text-shadow: 0px 1px 1px #fff;
+}
+			.text ol, .text ul {
+					list-style: disc;
+					margin: 5px 0 10px 20px;
+					color: #8c8a8a;
+					line-height: 1.5em;
+			}
+			.text blockquote {
+					color: #8c8a8a;
+					margin: 10px 0 20px 30px;
+					line-height: 1.7em;
+			}
+			.text blockquote:before {
+					content: '\00AB\00A0';
+			}
+			.text blockquote:after {
+					content: '\00A0\00BB';
+			}
+			.text ul.post-meta, .text ul.tags {
+					list-style: none;
+					margin: 0;
+			}
+
+.video
+{
+	text-align: center;
+}
+
+.video a
+{
+	color: #3399cc;
+	text-decoration: none;
+}
+
+.audio             
+{
+	width: 100%;
+	text-align: center;
+}
+
+.audio a
+{
+	color: #3399cc;
+	text-decoration: none;
+}
+
+.quote a
+{
+	color: #3399cc;
+	text-decoration: none;
+}
+
+.link
+{
+	text-align: center;
+}
+
+div.audio_player
+{
+	background: #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div.video-frame
+{
+	background: #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.sidebar
+{
+	margin: 245px 0 0 75px; 
+}
+
+.sidebar li
+{
+	background: url(img/sidebar-button.png) no-repeat;
+	background-color
+	height: 35px;
+	width: 202px;              
+	margin-bottom: 4px;
+	line-height: 34px;
+	position: relative;
+}
+
+.sidebar li:active
+{
+	background-position-y: -38px;   
+}
+
+.sidebar a
+{
+	display: block;
+	color: #f2f2f2;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 0.8em;
+	padding-left: 40px;
+	text-align: left;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #000;
+	/* Issue with light text on dark in OSX*/
+	-webkit-text-stroke:1px transparent; /*fixes it for safari*/
+	opacity: 0.9999; /*improves it a little bit for FF */
+}
+
+.sidebar img
+{
+	display: inline;
+	position: absolute;
+	top:  9px;
+	left: 10px;
+}
+
+.at300bs
+{
+	margin-top: 9px;
+	margin-bottom: 9px;
+	margin-left: 10px; 
+}
+
+#controls
+{
+	margin: 20px 0 80px 0;
+}
+
+#old
+{
+	background: url(img/older.png) no-repeat;
+	color: #fff;               
+	display: block;
+	height: 33px;
+	width: 65px;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 0.7em;
+	float: left;
+	line-height: 30px;             
+	padding-left: 4px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #000;
+	/* Issue with light text on dark in OSX*/
+	-webkit-text-stroke:1px transparent; /*fixes it for safari*/
+	opacity: 0.9999; /*improves it a little bit for FF */           
+}
+
+#old:active
+{
+	background-position-y: -33px;
+}
+
+#new
+{
+	background: url(img/newer.png) no-repeat;
+	color: #fff;
+	display: block;
+	height: 33px;
+	width: 65px;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 0.7em;
+	float: right;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #000;
+	/* Issue with light text on dark in OSX*/
+	-webkit-text-stroke:1px transparent; /*fixes it for safari*/
+	opacity: 0.9999; /*improves it a little bit for FF */           
+}
+
+#new:active
+{
+	background-position-y: -33px;
+}
+
+
+/* --- Typography --- */
+
+h1 a
+{
+	display: block;
+	color: #4d555d;
+	-webkit-mask: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0, 1)), to(rgba(120,125,133, 1)));
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 4em;
+	line-height: 1.2em;
+	margin: 0 0 20px 0;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #fff;
+}
+
+h2 a
+{
+	color: #585757;
+	text-decoration: none;
+	font: 1.1em "Helvetica Neue", Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+.link h2 a
+{
+	font-size: 2em;
+	font-weight: bolder;
+	border-bottom: 5px double #d9d7d7;
+}
+
+#content h1                
+{
+	color: #525252;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;               
+	text-shadow: 0 1px 1px #fff;
+	padding: 10px 0 10px 20px;
+}              
+
+			#content h2
+			{
+					margin-bottom: 15px;
+			}
+
+.post-meta
+{
+	color: #9e9d9d;
+	list-style: none;
+	margin: 5px 0 35px 0;
+	font: .9em "Helvetica Neue", Arial, Helvetica, sans-serif;
+	text-align: left;
+}              
+
+.notes
+{
+	color: #3399cc;
+	list-style: none;
+	font: .8em "Helvetica Neue", Arial, Helvetica, sans-serif;
+	float: right;
+}
+
+p
+{
+	color: #8c8a8a;
+	font: .9em "Helvetica Neue", Arial, Helvetica, sans-serif;
+	line-height: 140%;
+}
+
+blockquote p
+{
+	display: block;
+	background: #fff;
+	color: #5d5d5d;
+	padding: 12px 15px 12px 15px;
+	list-style: none;
+	font: italic 1.2em light Georgia, "Times New Roman", Times, serif;
+	text-align: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.source
+{
+	color: #444343;
+	font: 1em Georgia, "Times New Roman", Times, serif;
+	margin: 10px 0 0 0;
+	text-align: right;
+}
+
+#header p
+{
+	color: #323232;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: medium;               
+	font-size: 0.9em;
+	text-shadow: 0 1px 1px #fff;
+	line-height: 150%;
+}
+
+.tags
+			{
+				margin: 20px 0 15px 0; line-height: normal; width: 100%;
+			}
+			a.tag
+			{
+				-webkit-border-radius: 50px;
+				-moz-border-radius: 50px;
+				border-radius: 50px;
+				background: #9f9f9f;
+				color: #ffffff;
+				padding: 2px 10px 4px 10px;
+				font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+				font-size: 0.8em;
+				font-weight: bold;
+									margin-right: 3px;
+				text-align: center;
+				text-decoration: none;
+				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+				/* Issue with light text on dark in OSX*/
+				-webkit-text-stroke:1px transparent; /*fixes it for safari*/
+				opacity: 0.9999; /*improves it a little bit for FF */
+			}
+
+.caption p
+{
+
+	color: #ffffff;
+	display: inline-block;
+	background: #646464;
+	margin: 10px 0 0 0;
+	padding: 5px 8px 5px 8px;
+	font-size: 0.8em;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+	text-align: center;
+	/* Issue with light text on dark in OSX*/
+	-webkit-text-stroke:1px transparent; /*fixes it for safari*/
+	opacity: 0.9999; /*improves it a little bit for FF */
+}
+
+
+
+/* --- Images, Buttons, etc. --- */
+
+#header img
+{
+	margin: 20px 0 0 0;
+}
+
+
+a.nav-capsule
+{
+	display: block;
+	color: #525252;
+	height: 28px;
+	width: 103px;
+	background: url(img/capsule.png);
+	margin: 12px 10px 12px 0;
+	font-size: 0.9em;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	float: left;
+	line-height: 28px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-transition: color 0.2s linear;          
+}
+
+a.nav-capsule:hover
+{
+	color: #969696;
+}
+
+#app-store-link
+{
+	background: url(img/availableontheiphoneappstore.png);
+	display: block;
+	margin: 5px 0 0 0;
+	height: 63px;
+	width: 184px;
+	text-indent: -9999px;
+}
+
+#iphone
+{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 0;
+}
+
+#screen
+{
+	position: absolute;
+	top: 139px;
+	left: 69px;
+	z-index: 1;
+	height: 323px;
+	width: 215px;
+}
+
+.picture
+{
+	border: 5px solid #ffffff;
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+			
