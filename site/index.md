@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: BabyGrow
+tagline: Growth Charts for Little Humans
 ---
 {% include JB/setup %}
 
