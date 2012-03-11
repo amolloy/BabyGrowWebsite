@@ -26,30 +26,83 @@
 
   <body>
 
- <!--
-   <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-          <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
-        </div>
-      </div>
-    </div>
--->
-
     <div class="container">
 
       <div class="content">
 			<div class="row">
-  				<div class="span4"><img class="iphone" src="{{ ASSET_PATH }}/img/iphone.png"></div>
+  				<div class="span4">
+  				<div id="screenshot-carousel" class="carousel slide">
+            <div class="carousel-inner" id="screenshot-carousel-inner">
+              <div class="item active" id="slideshow-image">
+                <img src="{{ ASSET_PATH }}/img/slideshow/RootView.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/ChildView.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/EditEntryView.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/CalendarView.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/WeightChart.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/LengthStatureChart.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/BMIChart.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/ChartSettingsView.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/PrintCharts.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="{{ ASSET_PATH }}/img/slideshow/InstantRead.jpg" alt="">
+              </div>
+            </div>
+          </div>
+  				</div>
+  				
+          
+
   				<div class="span8">
 					<div class="page-header">
   						<h1>{{ page.title }}<br> <small>{{ page.tagline }}</small></h1>
   					</div>
+  					
+  					<div class="tabbable">
+  					
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#1" data-toggle="tab">Features</a></li>
+    <li><a href="#2" data-toggle="tab">Reviews</a></li>
+    <li><a href="#3" data-toggle="tab">Blog</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div class="tab-pane active" id="1">
+      <p>Track your baby's weight, length, and head circumference on your iPhone&trade; or iPod touch&reg;. Charts for these measurements help you visualize your child's progress. Keep an eye on your baby's percentile rankings using data from the US Centers for Disease Control and Prevention (CDC) or the World Health Organization (WHO).</p>
+      <ul>
+    	 <li>Monitor the progress of an unlimited number of children, from birth to 36 months.</li>
+	    <li>Produce growth charts for Weight for Age, Length for Age, Head Circumference for Age and Weight for Length.</li>	    
+	    <li>Understand your child's growth patterns with accurate percentile information from the CDC and WHO.</li>
+	 	 <li>Instantly obtain percentiles for measurements for babies of any age from birth to 36 months.</li>
+	 	 <li>Supports pounds and kilograms for weight, and inches and centimeters for length.</li>
+	 	 <li>Send emails containing your babies' data.</li>
+	 	 <li>Backup your data using Dropbox.</li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="2">
+      <p>Some reviews.</p>
+    </div>
+    <div class="tab-pane" id="3">
+       <p>The blog</p>
+    </div>
+  </div>
+</div>
   				</div>
 			</div>
 
@@ -65,6 +118,19 @@
 
     </div> <!-- /container -->
 
+    <script src="{{ ASSET_PATH }}/js/jquery.js"></script>
+    <script src="{{ ASSET_PATH }}/js/jquery-ui-1.8.18.custom.min.js"></script>
+    <script src="{{ ASSET_PATH }}/js/bootstrap-transition.js"></script>
+    <script src="{{ ASSET_PATH }}/js/bootstrap-carousel.js"></script>
+    <script src="{{ ASSET_PATH }}/js/bootstrap-tab.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+	  $('#screenshot-carousel').carousel({
+		interval: 5000
+		});
+	});
+    </script>
+    
     {% include JB/analytics %}
   </body>
 </html>
