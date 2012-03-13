@@ -37,36 +37,36 @@ html, body {
 
 .page-header h1 {
 	padding-top: 15px;
-	font-size:61px;line-height:26px;
+	font-size:61px;
+	line-height:26px;
+	text-shadow: #e0e0e0 0px 2px 2px;
 }
 
 .page-header h1 small {
 	font-size:21px;
+	line-height:22px;
 }
 
 .topbar .btn {
   border: 0;
 }
 
-#screenshot-carousel {
-	background-image: url( '/assets/themes/babygrowapp/img/iphone.png' );
-	background-repeat:no-repeat;
-	background-position:center;
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#screenshot-carousel-inner {
-	min-height: 539px;
+.main-description {
+	font-size:22px;
+	line-height:22px;
 }
 
-#screenshot-carousel .item {
--webkit-transition:0.6s ease-in-out background;-moz-transition:0.6s ease-in-out background;-ms-transition:0.6s ease-in-out background;-o-transition:0.6s ease-in-out background;transition:0.6s ease-in-out background;
+.app-store-badge {
+	vertical-align: bottom;
+	text-align: right;
 }
 
-#screenshot-carousel .item>img {
-	position: relative;
-	left: 36px;
-	top: 96px;
-}
 
 /* tag_box ======================================================== */
 
