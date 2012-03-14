@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+pushd site
+
+~/.rvm/gems/ruby-1.9.3-p125/bin/jekyll
+
+rsync -arvuz _site/ asmoll01@staging.babygrowapp.com:staging.babygrowapp.com/b/ --exclude '.git' --exclude '.hg' --exclude '.hgcheck' --exclude 'build' --delete
+
+popd
+ 
