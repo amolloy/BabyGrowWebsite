@@ -29,21 +29,56 @@ tagline: Growth Charts for Little Humans
 <hr>
 <div class="row">
 	<div class="span4">
-		<h3>Multiple Children</h3>
-		<p>BabyGrow makes it easy to keep track of your children's growth, whether you have 1 or 16!</p>
+		<div class="row">
+			<div class="span4">
+				<h3>Multiple Children</h3>
+				<ul class="thumbnails" id="inline-thumbnail">
+					<li>
+ 		   				<div class="thumbnail">
+      						<a class="screenshots" href="assets/img/screenshots/MultipleChildren.jpg" title="Multiple Children"><img src="assets/img/thumbnails/MultipleChildrenThumb.jpg" alt=""></a>
+    					</div>
+  					</li>
+				</ul>
+				<p>BabyGrow makes it easy to keep track of your children's growth, whether you have 1 or 16!</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span4">
+				<h3>Instant Readings</h3>
+				<ul class="thumbnails" id="inline-thumbnail">
+					<li>
+ 	   					<div class="thumbnail">
+      						<a class="screenshots" href="assets/img/screenshots/InstantRead.jpg" title="Instant Readings"><img src="assets/img/thumbnails/InstantReadThumb.jpg" alt=""></a>
+    					</div>
+  					</li>
+				</ul>
+				<p>Get instant percentile readings for weight, length, and head circumference.</p>
+			</div>
+		</div>
 	</div>
 	<div class="span4">
-		<h3>Growth Charts</h3>
-		<p>Visual your child's progress with growth charts for weight, length, head circumference, weight over length, and BMI.</p>
+		<div class="row">
+			<div class="span4">
+				<h3>Growth Charts</h3>
+				<ul class="thumbnails" id="inline-thumbnail">
+					<li>
+ 	   					<div class="thumbnail">
+      						<a class="screenshots" href="assets/img/screenshots/WeightChart.jpg" title="Growth Charts"><img src="assets/img/thumbnails/WeightChartThumb.jpg" alt=""></a>
+    					</div>
+  					</li>
+				</ul>
+				<p>Visual your child's progress with growth charts for weight, length, head circumference, weight over length, and BMI.</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="span4">
+			<h3>Backup Your Data</h3>
+			<p>Easily keep your BabyGrow data backed up using <a href="http://db.tt/VUPhdiwW">Dropbox</a> (get 250MB free space on Dropbox if you register through this link).</p>
+			</div>
+		</div>
 	</div>
-	<div class="span4">
-		<h3>Instant Readings</h3>
-		<p>Get instant percentile readings for weight, length, and head circumference.</p>
-	</div>
-</div>
-<hr>
-<div class="row">
-	<div class="span8 offset2" id="quotes">
+	<div class="span4" id="quotes">
 		{% for node in site.pages %}
 			{% if 'testimonial' == node.layout %}
 				<div>
@@ -66,24 +101,10 @@ tagline: Growth Charts for Little Humans
 		{% endfor %}
 	</div>
 </div>
-<hr>
-<div class="row">
-	<div class="span4">
-		<h3>Multiple Units</h3>
-		<p>BabyGrow supports both metric and imperial measurements. You can even convert between them with ease.</p>
-	</div>
-	<div class="span4">
-		<h3>Growth Charts</h3>
-		<p>Visual your child's progress with growth charts for weight, length, head circumference, weight over length, and BMI.</p>
-	</div>
-	<div class="span4">
-		<h3>Backup Your Data</h3>
-		<p>Easily keep your BabyGrow data backed up using <a href="http://db.tt/VUPhdiwW">Dropbox</a> (get 250MB free space on Dropbox if you register through this link).</p>
-	</div>
-</div>
 
 <script type="text/javascript">                                                                                                                 
 $(document).ready(function() { 
+	$(".screenshots").colorbox({rel:'screenshots'});
 	$.fn.cycle.defaults.timeout = 15000;
 	$('#quotes').cycle({                                                                                                                     
                 fx: 'fade'     
