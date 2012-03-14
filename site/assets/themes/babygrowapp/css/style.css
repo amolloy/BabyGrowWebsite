@@ -66,6 +66,11 @@ html, body {
 	text-align: right;
 }
 
+#inline-thumbnail {
+	float: left;
+	margin-right: 10px;
+}
+
 /* tag_box ======================================================== */
 
 .tag_box {
