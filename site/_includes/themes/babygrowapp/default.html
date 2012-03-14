@@ -21,6 +21,11 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+  
+  <!-- This should usually go down below, but I couldn't figure out how to safely load a jquery plugin from a page without having already loaded jquery before displaying the page content. -->
+  <script src="{{ ASSET_PATH }}/js/jquery.js" type="text/javascript">
+</script>
+  
 <div class="container">
 	<div class="content">
 	{{ content }} 
@@ -31,12 +36,17 @@
 </div>
 
 <!-- /container -->
-<script src="{{ ASSET_PATH }}/js/jquery.js" type="text/javascript">
-</script><script src="{{ ASSET_PATH }}/js/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
-</script><script src="{{ ASSET_PATH }}/js/bootstrap-transition.js" type="text/javascript">
-</script><script src="{{ ASSET_PATH }}/js/bootstrap-carousel.js" type="text/javascript">
-</script><script src="{{ ASSET_PATH }}/js/bootstrap-tab.js" type="text/javascript">
-</script><script type="text/javascript">
+<script src="{{ ASSET_PATH }}/js/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+<script src="{{ ASSET_PATH }}/js/bootstrap-transition.js" type="text/javascript">
+</script>
+<script src="{{ ASSET_PATH }}/js/bootstrap-carousel.js" type="text/javascript">
+</script>
+<script src="{{ ASSET_PATH }}/js/bootstrap-tab.js" type="text/javascript">
+</script>
+<script src="{{ ASSET_PATH }}/js/jquery.cycle.all" type="text/javascript">
+</script>
+<script type="text/javascript">
   $(document).ready(function(){
        });
   </script>

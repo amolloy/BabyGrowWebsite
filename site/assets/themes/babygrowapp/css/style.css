@@ -67,6 +67,19 @@ html, body {
 	text-align: right;
 }
 
+.testimonial {
+	display:block;
+	padding:16px 24px 20px 24px;
+	background:url(../gui/bg_quotes.jpg) no-repeat;
+	overflow:hidden;
+}
+
+.sign {
+	display:block; 
+	color:#CFE795;
+	 padding-top:12px; 
+	 line-height:1.36em;
+}
 
 /* tag_box ======================================================== */
 
