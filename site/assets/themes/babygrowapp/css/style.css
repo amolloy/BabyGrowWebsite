@@ -39,7 +39,6 @@ html, body {
 	padding-top: 15px;
 	font-size:61px;
 	line-height:26px;
-	text-shadow: #e0e0e0 0px 2px 2px;
 }
 
 .page-header h1 small {
@@ -65,20 +64,6 @@ html, body {
 .app-store-badge {
 	vertical-align: bottom;
 	text-align: right;
-}
-
-.testimonial {
-	display:block;
-	padding:16px 24px 20px 24px;
-	background:url(../gui/bg_quotes.jpg) no-repeat;
-	overflow:hidden;
-}
-
-.sign {
-	display:block; 
-	color:#CFE795;
-	 padding-top:12px; 
-	 line-height:1.36em;
 }
 
 /* tag_box ======================================================== */
