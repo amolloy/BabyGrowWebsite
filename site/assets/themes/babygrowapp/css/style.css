@@ -56,19 +56,15 @@ html, body {
     margin-right: auto;
 }
 
+.right-image {
+    display: block;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
 .main-description {
 	font-size:22px;
 	line-height:22px;
-}
-
-.app-store-badge {
-	vertical-align: bottom;
-	text-align: right;
-}
-
-#inline-thumbnail {
-	float: left;
-	margin-right: 10px;
 }
 
 /* tag_box ======================================================== */
