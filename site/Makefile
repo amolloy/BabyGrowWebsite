@@ -1,4 +1,4 @@
-SHELL:=/bin/zsh
+#SHELL:=/bin/zsh
 CSSFILES:=$(shell find _site -regex '.*\.css')
 
 server:
@@ -9,7 +9,6 @@ render:
 	@@jekyll --no-future
 
 minify:
-
 	@@echo "Minifying the CSS..."
 	for cssfile in $(CSSFILES) ; do \
 		/usr/local/bin/yuicompressor --verbose --type css -o $$cssfile $$cssfile ; \
@@ -24,6 +23,19 @@ stage: build
 	@@rsync -arvuz _site/ asmoll01@staging.babygrowapp.com:staging.babygrowapp.com/ --exclude '.git' --exclude '.hg' --exclude '.hgcheck' --exclude 'build' --delete
 
 deploy: build
-	@@echo 'Doing nothing.'
+	@@while true; do \
+		read -p "Deploy site to production server? " yn ;\
+		case $$yn in \
+			[Yy]* ) break;; \
+			[Nn]* ) break;; \
+			* ) echo "Please answer yes or no.";; \
+		esac ;\
+	done; \
+	export yn
+
+	@@echo yn: $$yn
+
+	@@if [[ $$yn =~ [Nn]* ]]; then echo "Aborting."; false; fi
+	@@echo 'Deploying (not really).'
 
 .PHONY: server render build minify deploy
