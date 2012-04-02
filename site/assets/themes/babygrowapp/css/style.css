@@ -67,6 +67,12 @@ html, body {
 	line-height:24px;
 }
 
+#left-column {
+	background-image: url( '/assets/img/iphone.png' );
+	background-repeat: no-repeat;
+	padding-top: 610px;
+}
+
 /* tag_box ======================================================== */
 
 .tag_box {
