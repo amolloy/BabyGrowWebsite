@@ -6,7 +6,7 @@ server:
 
 render:
 	@@echo "Building the site..."
-	@@jekyll --no-future
+	@@jekyll --no-future --safe
 
 minify:
 	@@echo "Minifying the CSS..."
@@ -31,11 +31,10 @@ deploy: build
 			* ) echo "Please answer yes or no.";; \
 		esac ;\
 	done; \
-	export yn
-
-	@@echo yn: $$yn
-
-	@@if [[ $$yn =~ [Nn]* ]]; then echo "Aborting."; false; fi
-	@@echo 'Deploying (not really).'
+	echo yn: $$yn;\
+	\
+	if [[ $$yn =~ [Nn]* ]]; then echo "Aborting."; false; fi; \
+	echo 'Deploying.'; \
+	rsync -arvuz _site/ asmoll01@staging.babygrowapp.com:babygrowapp.com/ --exclude '.git' --exclude '.hg' --exclude '.hgcheck' --exclude 'build' --delete
 
 .PHONY: server render build minify deploy
