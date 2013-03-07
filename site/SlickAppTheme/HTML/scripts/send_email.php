@@ -5,8 +5,8 @@
 	$topic = $_POST['topic'];
 	$message = $_POST['message'];
 	
-	$site_owners_email = 'you@youremail.com'; // Replace this with your own email address
-	$site_owners_name = 'Your Name'; // replace with your name
+	$site_owners_email = 'support@babygrowapp.com'; // Replace this with your own email address
+	$site_owners_name = 'Andy Molloy'; // replace with your name
 	
 	if (strlen($name) < 2) {
 		$error['name'] = "Please enter your name";	
@@ -34,12 +34,12 @@
 		// EDIT THIS!!
 		
 		$mail->Mailer = "smtp";
-		$mail->Host = "mail.yoursmtp.com";
+		$mail->Host = "mail.dreamhost.com";
 		$mail->Port = 25;
 		
 		$mail->SMTPAuth = true; // turn on SMTP authentication
-		$mail->Username = "you@youremail.com"; // SMTP username
-		$mail->Password = "yourpassword"; // SMTP password
+		$mail->Username = "info@babygrowapp.com"; // SMTP username
+		$mail->Password = "gH27F7qQ"; // SMTP password
 
 		$mail->Send();
 		
