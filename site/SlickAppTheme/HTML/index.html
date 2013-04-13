@@ -42,7 +42,7 @@
 				</ul>
 			
 				<div class="actions">
-					<a href="http://itunes.apple.com/us/app/babygrow-growth-charts-for/id316177673?mt=8" class="app_store">Available on the iPhone</a>
+					<a href="http://itunes.apple.com/us/app/babygrow-growth-charts-for/id316177673?mt=8" onClick="recordOutboundLink(this, 'AppStore Link', 'View in App Store');return false;" class="app_store">Available on the iPhone</a>
 					<p>
 						<b>Requirements:</b>
 						Compatible with iPhone and iPod touch.
@@ -518,7 +518,7 @@
 		</div>
 		
 		<div class="bottom">
-			<a href="https://itunes.apple.com/us/app/babygrow-growth-charts-for/id316177673?mt=8&uo=4" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-sm.png) no-repeat;width:61px;height:15px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-sm.svg);}"></a>
+			<a href="https://itunes.apple.com/us/app/babygrow-growth-charts-for/id316177673?mt=8&uo=4" onClick="recordOutboundLink(this, 'AppStore Link', 'View in App Store');return false;" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-sm.png) no-repeat;width:61px;height:15px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-sm.svg);}"></a>
 			<p>Copyright &copy; 2013 Babygrowapp.com. All Rights Reserved.</p>
 			<div class="clear"></div>
 		</div>
@@ -535,6 +535,17 @@
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
+	  
+	  function recordOutboundLink(link, category, action) {
+      try
+	  {
+	    _gaq.push(['_trackEvent', category,  action ]);
+	    setTimeout('window.location = "' + link.href + '"', 100)
+	  }
+	  catch(err)
+	  {
+	  }
+	  }
 	</script>
 </body>
 </html>
