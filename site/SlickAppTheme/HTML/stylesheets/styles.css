@@ -184,15 +184,13 @@ div#features {
 div#reviews_faqs { padding-top: 35px; }
 div#reviews {
 	float: left;
-	width: 275px;
+	width: 283px;
 	height: 528px;
-	padding-right: 60px;
-	background: url('../images/vertical_seperator.gif') repeat-y right;
+	padding-right: 13px;
 	overflow: hidden;
 	position: relative;
 }
 	div#reviews div.review {
-		background: url('../images/quotes.gif') no-repeat top left;
 		padding-left: 30px;
 		margin-bottom: 35px;
 		position: relative;
@@ -218,14 +216,16 @@ div#reviews {
 				margin-top: 3px;
 			}	
 				div#reviews div.review span a:hover{ color: #555; }
-div#faqs { float: right; width: 540px; }
+div#faqs { float: right; width: 604px; }
 	div#faqs div.left_column {
 		float: left;
-		width: 240px;
+		width: 283px;
+		padding-left: 10px;
 	}
 	div#faqs div.right_column {
-		float: right;
-		width: 240px;
+		float: left;
+		width: 283px;
+		padding-left: 25px;
 	}
 	div#faqs div.faq {
 		margin-bottom: 40px;
