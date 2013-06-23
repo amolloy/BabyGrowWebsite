@@ -13,7 +13,7 @@ $(document).ready(function() {
 	  items: 'div',
 	  axis: 'y',
 	  duration: 800,
-	  interval: 5000,
+	  interval: 10000,
 	  cycle: true
 	});
 	$('#reviews').trigger('next');
